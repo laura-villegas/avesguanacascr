@@ -170,8 +170,8 @@ ggplotly(grafico_ggplot2, tooltip = "text") |>
   config(locale = 'es')
 ```
 
-#Gráfico de barras anual
-Se muestra la coantidad de individuos por especie registrados cada año. Se puede observa que los patos son quienes presentan mayor número de individuos (Dendrocygna autumnalis y Spatula discors).
+# Gráfico de barras anual
+Se muestra la cantidad de individuos por especie registrados cada año. Se puede observar que los patos presentan mayor número de individuos (Dendrocygna autumnalis y Spatula discors).
 
 ```{r}
 #| label: grafico-barras
@@ -235,6 +235,8 @@ names(bios)
 
 ```{r}
 #| label: cut-area
+#| warning: false
+#| message: false
 
 # Definir la extensión del área de estudio
 area_estudio <- ext(
@@ -249,10 +251,12 @@ clima <- crop(bios, area_estudio)
 ```
 
 # Cargar datos de humedales
-Nosotras utilizamos la capa de  Global Lakes and Wetlands Database: GLWD_v2_delta_area_ha_x10, que nos indica el porcentaje de cobertura de humedales lo cual para éste análisis es adecuado puesto que las aves sus hábitos de vida están relacionados a ellos. 
+Nosotras utilizamos la capa de  Global Lakes and Wetlands Database: GLWD_v2_delta_area_ha_x10, que indica el porcentaje de cobertura de humedales, que para éste análisis es adecuado puesto que las aves y sus hábitos de vida están relacionados a ellos. 
 
 ```{r}
 #| label: datos-humedales
+#| warning: false
+#| message: false
 
 ruta_humedal <- "C:/Users/laura/OneDrive - Universidad de Costa Rica/Monitoreo_ambiental/Aves_Palo_Verde/GLWD_v2_delta_combined_classes_tif/GLWD_v2_delta_combined_classes/GLWD_v2_delta_area_ha_x10.tif"
 
@@ -413,7 +417,7 @@ ggplotly(grafico_ggplot2) |>
   config(locale = 'es')
 ```
 
-#Graficar mapa de distribución continua
+# Graficar mapa de distribución continua
 
 ```{r}
 #| label: grafico-distribucion-continua
@@ -630,12 +634,12 @@ leaflet() |>
 
 # Referencias
 
-Barchiesi, S., Alonso, A., Pazmiño-Hernandez, M., Serrano-Sandí, J. M., Muñoz-Carpena, R., & Angelini, C. (2022). Wetland hydropattern and vegetation greenness predict avian populations in Palo Verde, Costa Rica. Ecological Applications: A Publication of the Ecological Society of America, 32(2). https://doi.org/10.1002/eap.2493
+* Barchiesi, S., Alonso, A., Pazmiño-Hernandez, M., Serrano-Sandí, J. M., Muñoz-Carpena, R., & Angelini, C. (2022). Wetland hydropattern and vegetation greenness predict avian populations in Palo Verde, Costa Rica. Ecological Applications: A Publication of the Ecological Society of America, 32(2). https://doi.org/10.1002/eap.2493
 
-eBird Basic Dataset. Version: EBD_relSep-2024. Cornell Lab of Ornithology, Ithaca, New York. Sep 2024.
+* eBird Basic Dataset. Version: EBD_relSep-2024. Cornell Lab of Ornithology, Ithaca, New York. Sep 2024.
 
-SINAC (2020) Plan General de Manejo Parque Nacional Palo Verde 2013-2023, Volúmen 1: Diagnóstico, Sistema Nacional de Área de Conservación, Costa Rica.  
+* SINAC (2020) Plan General de Manejo Parque Nacional Palo Verde 2013-2023, Volúmen 1: Diagnóstico, Sistema Nacional de Área de Conservación, Costa Rica.  
 
-SINAC (2024) Área de Conservación Arenal-Tempisque. Sistema Nacional de Áreas de Conservación, Costa Rica.  Recuperado de: https://www.sinac.go.cr/es/ac/acat/paginas/default.aspx  
+* SINAC (2024) Área de Conservación Arenal-Tempisque. Sistema Nacional de Áreas de Conservación, Costa Rica.  Recuperado de: https://www.sinac.go.cr/es/ac/acat/paginas/default.aspx  
 
-Global climate and weather data — WorldClim 1 documentation. (s/f). Worldclim.org. Recuperado el 28 de noviembre de 2024, de https://www.worldclim.org/data/index.html 
+* Global climate and weather data — WorldClim 1 documentation. (s/f). Worldclim.org. Recuperado el 28 de noviembre de 2024, de https://www.worldclim.org/data/index.html 
